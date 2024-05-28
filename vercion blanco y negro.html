@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscripción</title>
+</head>
+<body>
+    <h1>Formulario de inscripción</h1>
+
+    <form id="formularioInscripcion">
+
+        <h2>Datos personales</h2>
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="tipoDocumento">Tipo de documento:</label>
+        <select id="tipoDocumento" name="tipoDocumento" required>
+            <option value="">Seleccione...</option>
+            <option value="CC">Cédula de ciudadanía</option>
+            <option value="CE">Cédula de extranjería</option>
+            <option value="TP">Tarjeta profesional</option>
+        </select>
+
+        <label for="numeroDocumento">Número de documento:</label>
+        <input type="number" id="numeroDocumento" name="numeroDocumento" required>
+
+        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+        <label for="Tipo documento identidad">Tipo documento identidad:</label>
+        <input type="radio" id="T.I" name="Tipo de documento" value="T.I" required>
+        <label for="Tipo de documento">T.I</label>
+        <input type="radio" id="C.C" name="genero" value="femenino" required>
+        <label for="Tipo de documento">C.C</label>
+
+        <h2>Datos de contacto</h2>
+
+        <label for="correoElectronico">Correo electrónico:</label>
+        <input type="email" id="correoElectronico" name="correoElectronico" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+        <label for="direccion">Barrio:</label>
+        <input type="text" id="direccion" name="direccion" required>
+        <label for="direccion">Ciudad:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+
+
+        <h2>Tipos de sangre</h2>
+
+        <label for="Tipos de sangre">tipo de sangre:</label>
+        <select id="Tipos de sangre" name="programaAcademico" required>
+            <option value="">Seleccione...</option>
+            <option value="ingenieriaSistemas">A+</option>
+            <option value="Tipos de sangre">A-</option>
+            <option value="Tipos de sangre">O-</option>
+            <option value="Tipos de sangre">O+</option>
+            <option value="Tipos de sangre">AB</option>
+        </select>
+
+        <label for="EPS">EPS:</label>
+        <input type="EPS" id="EPS" name="EPS" required>
+
+
+        <h2>Sufre de alguna enfermedad</h2>
+
+
+        <input type="checkbox" id="habilidadBasesDatos" name="habilidadesTecnicas[]" value="basesDatos">
+        <label for="habilidadBasesDatos">si</label>
+
+        <input type="checkbox" id="habilidadRedesInformaticas" name="habilidadesTecnicas[]" value="redesInformaticas">
+        <label for="habilidadRedesInformaticas">no</label>
+
+        <input type="checkbox" id="habilidadRedesInformaticas" name="habilidadesTecnicas[]" value="redesInformaticas">
+        <label for="habilidadRedesInformaticas">cual?</label>
+
+        <h3>Habilidades blandas</h3>
+
+        <input type="checkbox" id="habilidadComunicacion" name="habilidadesBlandas[]" value="comunicacion">
+        <label for="habilidadComunicacion">Comunicación</label>
+
+        <input type="checkbox" id="habilidadTrabajoEnEquipo" name="habilidadesBlandas[]" value="trabajoEnEquipo">
+        <label for="habilidadTrabajoEnEquipo">Trabajo en equipo</label>
+
+        <input type="checkbox" id="habilidadResolucionProblemas" name="habilidadesBlandas[]" value="resolucionProblemas">
+        <label for="habilidadResolucionProblemas">Resolución de problemas</label>
+
+        <button type="submit">Enviar formulario</button>
+
+    </form>
+
+    <script>
+        const formularioInscripcion = document.getElementById('formularioInscripcion');
+
+        formularioInscripcion.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            // Validar nombre
+            const
